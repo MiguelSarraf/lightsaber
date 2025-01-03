@@ -2,7 +2,7 @@
 
 ## Unity tests
 
-- [ ] nodeMCU heart beat
+- [X] nodeMCU heart beat
 - [ ] nodeMCU server and write to EEPROM
 - [ ] giroscope
 - [ ] mp3 player
@@ -11,7 +11,7 @@
 
 ## Current measures
 
-After those is tested, I will measure the current drawn by each module to estimate the battery capacity I need.
+After those are tested, I will measure the current drawn by each module to estimate the battery capacity I need.
 
 After that, I will buy and test the battery charging modules and the battery monitor.
 
