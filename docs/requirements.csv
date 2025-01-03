@@ -1,0 +1,9 @@
+kind,requirement,component_needed
+funcional,Blade lightens up when button in activated and fades out on second touch,"LED strip, button"
+funcional,Blade lightens up and fades out incrementaly,LED strip
+funcional,Special sound when turning the blade on and off,"mp3 module, button"
+funcional,Continuous sound playing while turned on increases and decreases in volume the faster the saber is moving,"mp3 module, giroscope"
+funcional,Special sound when hit,"mp3 module, giroscope"
+funcional,Blade color can be customized on web server,"LED strip, nodeMCU"
+funcional,Battery percentage can be checked on web server,"rechargeable battery module, nodeMCU"
+non funcional,At least 12h autonomy,rechargeable battery
