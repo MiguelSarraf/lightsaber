@@ -3,8 +3,8 @@
 ## Unity tests
 
 - [X] nodeMCU heart beat
-- [ ] nodeMCU server and write to EEPROM
-- [ ] giroscope
+- [X] nodeMCU server and write to EEPROM
+- [X] gyroscope
 - [ ] mp3 player
 - [ ] led strip
 - [ ] button
@@ -18,3 +18,4 @@ After that, I will buy and test the battery charging modules and the battery mon
 ## Final assembly
 
 With everything properly tested, I will assemble all the parts and develop the final code. Probably I will do it in several micro-steps.
+
