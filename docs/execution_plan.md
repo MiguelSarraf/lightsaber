@@ -7,7 +7,13 @@
 - [X] gyroscope
 - [ ] mp3 player
 - [ ] led strip
-- [ ] button
+- [X] button
+
+Heart beat and sercer and EEPROM went well without big problems.
+
+Gyroscope was a little hard to configure and read. I may get a headache when trying to use this reading along with the mp3 player.
+
+Button behaviour is not as I wanted it to be. I am far from an expert, but [it seems like I cannot get multithreading with ArduinoIDE](https://www.esp8266.com/viewtopic.php?f=32&t=22985). This will not allow stopping wake up and shut down routines on new button presses. I don't think it is a big problem, but still not optimal.
 
 ## Current measures
 
