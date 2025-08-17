@@ -1,8 +1,9 @@
 #include <FastLED.h>
 
 // Parameters
-#define NUM_LEDS 144
-#define DATA_PIN 0
+#define NUM_LEDS 288
+#define DATA_PIN D3
+#define OFFSET 144+15
 // ---------------------
 
 // LED strip variables
@@ -20,23 +21,25 @@ void setup() {
 
 void loop() {
   // Get blade color and speed to be used
-  CRGB blade_color = CRGB(255, 255, 0); // Yellow
-  int speed = 6; // From 1 to 10
+  CRGB blade_color = CRGB(255, 255, 00); // Yellow
+  int speed = 2; // From 1 to 5
 
   // Activate one pixel at a time
-  for(int pixel_position = 0; pixel_position < NUM_LEDS; pixel_position = pixel_position + 1) {
-    leds[pixel_position] = blade_color;
+  for(int pixel_position = OFFSET; pixel_position < NUM_LEDS; pixel_position = pixel_position + speed) {
+    for(int offset = 0; offset < speed; offset++){
+      leds[pixel_position+offset] = blade_color;
+    }
     FastLED.show();
-    delay(11-speed);
   }
 
   delay(1000);
 
   // Deactivate one pixel at a time
-  for(int pixel_position = NUM_LEDS-1; pixel_position >= 0; pixel_position = pixel_position - 1) {
-    leds[pixel_position] = black;
+  for(int pixel_position = NUM_LEDS-1; pixel_position >= OFFSET; pixel_position = pixel_position - speed) {
+    for(int offset = 0; offset < speed; offset++){
+      leds[pixel_position-offset] = black;
+    }
     FastLED.show();
-    delay(11-speed);
   }
 
   delay(1000);
