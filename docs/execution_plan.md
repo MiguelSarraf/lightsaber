@@ -17,6 +17,8 @@ Button behaviour is not as I wanted it to be. I am far from an expert, but [it s
 
 LED strip is drawing too much current, the button (intentionally left on the circuit from previous assemble) fades out in brightness as more pixels are activated on the strip. I will need to connect it directly to the power source once I buy it. Also, I just found out that what takes the most time is actually showing the pixels on the trip, so I removed the delay and implemented the speed control with more pixel being powered at a time.
 
+I am now experimenting with the mp3 player module. I have already managed to make the sound work, but I cannot yet break down how I control which file is played.
+
 ## Current measures
 
 After those are tested, I will measure the current drawn by each module to estimate the battery capacity I need.
