@@ -24,7 +24,7 @@ void loop() {
   CRGB blade_color = CRGB(255, 255, 00); // Yellow
   int speed = 2; // From 1 to 5
 
-  // Activate one pixel at a time
+  // Activate speed pixels at a time
   for(int pixel_position = OFFSET; pixel_position < NUM_LEDS; pixel_position = pixel_position + speed) {
     for(int offset = 0; offset < speed; offset++){
       leds[pixel_position+offset] = blade_color;
@@ -34,7 +34,7 @@ void loop() {
 
   delay(1000);
 
-  // Deactivate one pixel at a time
+  // Deactivate speed pixels at a time
   for(int pixel_position = NUM_LEDS-1; pixel_position >= OFFSET; pixel_position = pixel_position - speed) {
     for(int offset = 0; offset < speed; offset++){
       leds[pixel_position-offset] = black;
