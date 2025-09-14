@@ -32,7 +32,7 @@ For organization, I separate this in micro-steps:
 
 1. [X] heart beat + button
 1. [X] heart beat + button + LED strip
-1. [ ] heart beat + button + LED strip + mp3 player
+1. [X] heart beat + button + LED strip + mp3 player
 1. [ ] heart beat + button + LED strip + mp3 player + gyroscope
 1. [ ] heart beat + button + LED strip + mp3 player + gyroscope + configuration server
 
