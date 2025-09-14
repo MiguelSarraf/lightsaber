@@ -8,6 +8,7 @@
 - [X] mp3 player
 - [X] LED strip
 - [X] button
+- [ ] Voltage measure
 
 Heart beat and server and EEPROM went well without big problems.
 
@@ -23,7 +24,19 @@ After those are tested, I will measure the current drawn by each module to estim
 
 After that, I will buy and test the battery charging modules and the battery monitor.
 
+## Integration
+
+Taking each individual module and putting them into a unique code for the lightsaber.
+
+For organization, I separate this in micro-steps:
+
+1. [X] heart beat + button
+1. [X] heart beat + button + LED strip
+1. [ ] heart beat + button + LED strip + mp3 player
+1. [ ] heart beat + button + LED strip + mp3 player + gyroscope
+1. [ ] heart beat + button + LED strip + mp3 player + gyroscope + configuration server
+
 ## Final assembly
 
-With everything properly tested, I will assemble all the parts and develop the final code. Probably I will do it in several micro-steps.
+With everything properly tested, I will assemble the hilt and embed the eletronics in it.
 
