@@ -1,13 +1,26 @@
 // PINS DEFINITION
-#define BUTTON_PIN D1 // GPIO21 pin connected to button
+#define heartBeatLed LED_BUILTIN
+#define BUTTON_PIN D1
 #define LED_PIN D2
 // ---------------------
 
 // STATE VARIABLES
+int heartBeatLedState = LOW;
+unsigned long previousMillis = 0;
+const long heartBeatInterval = 1000;
+
 int lastButtonState = HIGH; // the previous state from the input pin
 int currentButtonState;     // the current reading from the input pin
 int currentLighsaberState = LOW;     // the current reading from the input pin
 // ---------------------
+
+// Toggle function alternates between LOW and HIGH states.
+int toggle(int state) {
+  if (state == LOW) {
+    return HIGH;
+  }
+  return LOW;
+}
 
 // Function where wake up pattern will be placed
 void wake_up(){
@@ -54,11 +67,21 @@ int toggle_lightsaber_state(int state, int lastButtonState, int currentButtonSta
 void setup() {
   Serial.begin(9600);
   // Initialize pins
+  pinMode(heartBeatLed, OUTPUT);
+
   pinMode(BUTTON_PIN, INPUT_PULLUP);
   pinMode(LED_PIN, OUTPUT);
 }
 
 void loop() {
+  unsigned long currentMillis = millis();
+  // Checks if ellapsed time is greater than heart beat interval and toggle state.
+  if (currentMillis - previousMillis >= heartBeatInterval) {
+    previousMillis = currentMillis;
+    heartBeatLedState = toggle(heartBeatLedState);
+    digitalWrite(heartBeatLed, heartBeatLedState);
+  }
+
   // Read button state and toggle if necessary
   currentButtonState = digitalRead(BUTTON_PIN);
   currentLighsaberState = toggle_lightsaber_state(currentLighsaberState, lastButtonState, currentButtonState);
