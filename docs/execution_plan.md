@@ -36,6 +36,8 @@ For organization, I separate this in micro-steps:
 1. [ ] heart beat + button + LED strip + mp3 player + gyroscope
 1. [ ] heart beat + button + LED strip + mp3 player + gyroscope + configuration server
 
+When integrating the gyroscope with the other parts, some weird things started to happen. When trying to play the swing audios, sometimes the mp3 player returns with errors and don't seem to find the files anymore until I remove and reinsert the SD card. I haven't figured it out yet if it is a general problem with the module or if it is something due to the specific audio being played. This commit has the general structure for the new logic, but More investigation needs to be done.
+
 ## Final assembly
 
 With everything properly tested, I will assemble the hilt and embed the eletronics in it.
